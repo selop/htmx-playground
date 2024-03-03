@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/main}">
+<body>
+<div layout:fragment="content" class="container mx-auto my-4">
+    <div class="text-xl">Welcome to your Spring Boot with Thymeleaf project!</div>
+    <div>See <code class="bg-yellow-500 px-2">HELP.md</code> for instructions on how to get started.</div>
+    <div class="max-w-sm flex items-center gap-4">
+        <div id="message">
+            <code class="bg-green-500">Hello</code>
+        </div>
+        <button class="items-center justify-center px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full inline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+                 th:hx-get="@{/htmx}"
+                 hx-target="#message">
+        Click me
+    </button>
+    </div>
+</div>
+</body>
+</html>
